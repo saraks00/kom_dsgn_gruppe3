@@ -1,5 +1,34 @@
-html, main {
-  margin: 0;
+/* Flexbox */
+/* Columns */
+/* Spacings */
+/* Colors */
+/* Sizes */
+/* misc */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBTUE7RUFDRSxTQUFBO0FDTEYiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+html, body {
+  margin: 0;
+  width: 100%;
+  color: hsl(0, 0%, 0%);
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 42%, 97%);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+}
+
+.title-smooth {
+  font-family: "Noto Serif Display", serif;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvX21peGlucy5zY3NzIiwiLi4vc2Fzcy9fY29sb3JzLnNjc3MiLCIuLi9zYXNzL191dGlsaXRpZXMuc2NzcyIsIi4uL3Nhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsWUFBQTtBQTBCQSxZQUFBO0FBcUNBLGFBQUE7QUMvREEsV0FBQTtBQ0FBLFVBQUE7QUFNQSxTQUFBO0FBR0EsVUFBQTtBQUNRLG9YQUFBO0FBQ0EseVZBQUE7QUFDQSwrWEFBQTtBQ1JSO0VBQ0UsbUJBQUE7QUNPRjs7QURMQTtFQUNFLFNBQUE7RUFDQSxXQUFBO0VBQ0EscUJBQUE7RUFDQSxrQ0RFVTtFQ0RWLGtDQUFBO0VBQ0EsbUNBQUE7RUFDQSx1QkFBQTtFQUNBLHNCQUFBO0FDUUY7O0FETEE7RUFDRSxzQ0RMVztBRWFiOztBRE5BO0VBQ0Usd0NEUGtCO0FFZ0JwQiIsImZpbGUiOiJtYWluLmNzcyJ9 */

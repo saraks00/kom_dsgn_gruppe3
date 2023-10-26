@@ -2,6 +2,23 @@
 @import "colors";
 @import "utilities";
 
-html, main {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html, body {
   margin: 0;
-};
+  width: 100%;
+  color: hslac($black, 1);
+  font-family: $font-main;
+  background-color: hslac($background, 1);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: $font-title;
+}
+.title-smooth {
+  font-family: $font-title-smooth;
+}
