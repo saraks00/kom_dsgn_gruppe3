@@ -1,6 +1,7 @@
 const aListTitles = document.querySelectorAll(".article-list-item-inner-title-inner span");
 const aListTitleWrappers = document.querySelectorAll(".article-list-item-inner-title-inner");
 const aListBackgrounds = document.querySelectorAll(".article-list-item-background");
+const toArticle = document.querySelectorAll(".to-article")[0];
 const aListAnimationDuration = ".65s";
 const aListAnimationDetails = "cubic-bezier(.175, .685, .32, 1) forwards";
 
@@ -11,10 +12,11 @@ for (let i = 0; i < aListTitleWrappers.length; i++) {
         aListBackgrounds[i].style.transform = 'scale(1.1, 1.1)';
     });
     aListTitleWrappers[i].addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default navigation behavior
+        event.preventDefault();
 
         titleClicked = true;
         aListBackgrounds[i].style.transform = 'scale(1.1, 1.1)';
+        toArticle.style.animation = `navbarOut .35s ${aListAnimationDetails}`;
 
         const targetSectionId = aListTitleWrappers[i].getAttribute("data-target");
         const targetSection = document.getElementById(targetSectionId);
@@ -41,7 +43,7 @@ for (let i = 0; i < aListTitleWrappers.length; i++) {
 
 window.addEventListener("load", function() {
     for (let i = 0; i < aListTitles.length; i++) {
-        const delay = 0.8 + i * 0.15; // Adjust the delay as needed
+        const delay = 0.8 + i * 0.15;
         aListTitles[i].style.animation = `aListTitle ${aListAnimationDuration} ${delay}s ${aListAnimationDetails}`;
     }
 });

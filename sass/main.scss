@@ -68,6 +68,59 @@ a:visited {
 .no-margin {
   margin: 0 !important;
 }
+/* Navbar */
+.navbar {
+  width: 100%; height: 5em;
+  position: fixed;
+  z-index: 100;
+  @include flex-center();
+
+  &-inner {
+    padding: 0 1em;
+    height: 100%;
+    &-logo {
+      height: 100%;
+      @include flex-left();
+
+      &-link {
+        @include flex-center();
+        svg {
+          height: 3em;
+          path {
+            fill: hslac($white, 1);
+          }
+        }
+      }
+    }
+  }
+}
+.to-index {
+  top: 2em;
+  .navbar-inner {
+    background-color: hslac($black, 0);
+    backdrop-filter: blur(0);
+    border-radius: .5rem;
+    transition: all .35s cubic-bezier($transition-main, 1);
+    /*animation: navbarIn .35s .35s cubic-bezier($transition-main, 1) forwards;*/
+  }
+}
+/* Keyframes */
+@keyframes navbarOut {
+  0% { top: 0; }
+  100% { top: 2em; }
+}
+@keyframes navbarIn {
+  0% { background-color: hslac($black, 0); backdrop-filter: blur(0); }
+  100% { background-color: hslac($black, .3); backdrop-filter: blur(1rem); }
+}
+@keyframes navbarInOut {
+  0% { background-color: hslac($black, .3); backdrop-filter: blur(1rem); }
+  100% { background-color: hslac($black, 0); backdrop-filter: blur(0); }
+}
+@keyframes navbarTopInOut {
+  0% { top: 2em; }
+  100% { top: 0; }
+}
 /* Header */
 .header {
   margin: 0 0 10em 0; padding: 0;
