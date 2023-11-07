@@ -5,6 +5,8 @@ const toArticle = document.querySelectorAll(".to-article")[0];
 const aListAnimationDuration = ".65s";
 const aListAnimationDetails = "cubic-bezier(.175, .685, .32, 1) forwards";
 
+let currentSectionIndex = 0; // Track the current section index
+
 for (let i = 0; i < aListTitleWrappers.length; i++) {
     let titleClicked = false;
 
@@ -47,3 +49,26 @@ window.addEventListener("load", function() {
         aListTitles[i].style.animation = `aListTitle ${aListAnimationDuration} ${delay}s ${aListAnimationDetails}`;
     }
 });
+
+window.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowDown" && currentSectionIndex < aListTitleWrappers.length - 1) {
+        currentSectionIndex++; // Move to the next section
+        scrollToSection(currentSectionIndex);
+    } else if (event.key === "ArrowUp" && currentSectionIndex > 0) {
+        currentSectionIndex--; // Move to the previous section
+        scrollToSection(currentSectionIndex);
+    }
+});
+
+function scrollToSection(index) {
+    const targetSectionId = aListTitleWrappers[index].getAttribute("data-target");
+    const targetSection = document.getElementById(targetSectionId);
+
+    if (targetSection) {
+        const scrollOptions = {
+            top: targetSection.offsetTop,
+            behavior: 'smooth',
+        };
+        window.scrollTo(scrollOptions);
+    }
+}
