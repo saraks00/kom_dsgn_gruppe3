@@ -14,6 +14,8 @@
     <!-- Scripts -->
     <script src="javascript/script.js" type="text/javascript" defer></script>
     <script src="javascript/article.js" type="text/javascript" defer></script>
+    <script src="javascript/rellax.min.js"></script>
+    <script src="javascript/rellax.js"></script>
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -123,9 +125,39 @@
         </article>
     </main>
 
+    <!-- Other Articles -->
+    <section class="other-article">
+        <h2 class="other-article-title">More Articles</h2>
+        <div class="other-article-list">
+            <div class="other-article-list-item" id="article-two">
+                <div class="other-article-list-item-inner">
+                    <div class="other-article-list-item-inner-title">
+                        <a class="other-article-list-item-inner-title-inner" href="article-two.html" data-target="article-two"><span>“New&nbsp</span><span class="ht-outlined">article”</span></a>
+                    </div>
+                    <div class="other-article-list-item-inner-overlay"></div>
+                    <img class="other-article-list-item-background rellax" data-rellax-speed="-4" data-rellax-percentage="0.5" src="https://images.unsplash.com/photo-1553544260-f87e671974ee?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                </div>
+                <img class="other-article-list-item-background-blur" src="https://images.unsplash.com/photo-1553544260-f87e671974ee?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </div>
+            <div class="other-article-list-item" id="article-three">
+                <div class="other-article-list-item-inner">
+                    <div class="other-article-list-item-inner-title">
+                        <a class="other-article-list-item-inner-title-inner" href="article-three.html" data-target="article-three"><span>“Flower&nbsp</span><span class="ht-outlined">things”</span></a>
+                    </div>
+                    <div class="other-article-list-item-inner-overlay"></div>
+                    <img class="other-article-list-item-background rellax" data-rellax-speed="-4" data-rellax-percentage="0.5" src="https://images.unsplash.com/photo-1667818139461-7772a11554f9?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                </div>
+                <img class="other-article-list-item-background-blur" src="https://images.unsplash.com/photo-1667818139461-7772a11554f9?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
 
     </footer>
 </body>
+<script>
+    var rellax = new Rellax('.rellax');
+</script>
 </html>
