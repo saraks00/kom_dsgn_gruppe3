@@ -49,26 +49,3 @@ window.addEventListener("load", function() {
         aListTitles[i].style.animation = `aListTitle ${aListAnimationDuration} ${delay}s ${aListAnimationDetails}`;
     }
 });
-
-window.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowDown" && currentSectionIndex < aListTitleWrappers.length - 1) {
-        currentSectionIndex++; // Move to the next section
-        scrollToSection(currentSectionIndex);
-    } else if (event.key === "ArrowUp" && currentSectionIndex > 0) {
-        currentSectionIndex--; // Move to the previous section
-        scrollToSection(currentSectionIndex);
-    }
-});
-
-function scrollToSection(index) {
-    const targetSectionId = aListTitleWrappers[index].getAttribute("data-target");
-    const targetSection = document.getElementById(targetSectionId);
-
-    if (targetSection) {
-        const scrollOptions = {
-            top: targetSection.offsetTop,
-            behavior: 'smooth',
-        };
-        window.scrollTo(scrollOptions);
-    }
-}
